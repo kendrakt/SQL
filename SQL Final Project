@@ -1,0 +1,117 @@
+# Here are my answers to multiple questions for the final SQL project. 
+
+#1
+SELECT BillingCountry FROM chinook.Invoices;
+
+#2
+SELECT emp.LastName, emp.Firstname , cust.FirstName AS customerFirstN, cust.LastName AS customerLastN, cust.Country, inv.total
+FROM chinook.employees emp
+JOIN chinook.Customers cust ON cust.SupportRepId = emp.EmployeeId
+JOIN chinook.Invoices Inv ON Inv.CustomerId = cust.CustomerId;
+
+#3
+SELECT emp.FirstName, emp.LastName,
+ROUND(SUM(Inv.Total), 2) as TotalSales
+FROM chinook.Employees emp
+JOIN chinook.Customers cust
+ON cust.SupportRepId = emp.EmployeeId
+JOIN chinook.Invoices Inv
+ON Inv.CustomerId = cust.CustomerId
+WHERE emp.Title = 'Sales Support Agent'
+GROUP BY emp.FirstName;
+
+#4
+SELECT SUM(*)
+FROM chinook.Invoices
+WHERE InvoiceDate BETWEEN '2009-01-01' AND '2009-12-31';
+
+#5
+SELECT * FROM chinook.Employees
+WHERE Title = "Sales Support Agent" ;
+
+#6
+SELECT FirstName, LastName, CustomerId, Country
+FROM chinook.customers
+WHERE Country != 'USA';
+
+#7
+	SELECT *
+FROM invoices
+JOIN invoice_items i
+ON invoices.invoiceid = i.invoiceid
+WHERE InvoiceDate LIKE '%2012%'
+GROUP BY i.invoiceid;
+
+#8
+SELECT t.Name AS Tracks, g.Name AS genre, t.Composer
+FROM genres g
+JOIN tracks t
+ON g.GenreId =t.GenreId
+GROUP BY t.trackid
+
+#9
+SELECT DISTINCT playlists.Name AS playlists, genres.Name AS genre
+FROM genres
+JOIN Tracks
+ON genres.GenreId= tracks.GenreId
+JOIN playlist_track
+ON playlist_track.TrackId = Tracks.TrackId
+JOIN playlists
+ON playlists.PlaylistId = playlist_track.PlaylistId
+WHERE playlists='Music'
+GROUP BY genre;
+
+#10
+SELECT genres.Name,invoices.Total
+FROM genres
+JOIN Tracks
+ON genres.GenreId = Tracks.GenreId
+JOIN invoice_items
+ON Tracks.TrackId = invoice_items.TrackId
+JOIN invoices
+ON invoice_items.InvoiceId =invoices.InvoiceId
+GROUP BY genres.Name
+ORDER BY Total desc;
+
+#11
+SELECT Tracks.TrackId,Name, invoices.Total
+FROM Tracks
+JOIN invoice_items
+ON Tracks.TrackId=invoice_items.TrackId
+JOIN invoices
+ON invoice_items.InvoiceId =invoices.InvoiceId
+GROUP BY Tracks.Name
+ORDER BY Total desc;
+
+#12
+SELECT customers.CustomerId, Country, State, SUM(invoices.Total)AS Country_total
+FROM customers
+JOIN invoices
+ON invoices.CustomerId=Customers.CustomerId
+GROUP BY customers.CustomerId
+ORDER BY Country_total desc;
+
+#13
+SELECT emp.FirstName, emp.LastName,
+ROUND(SUM(Inv.Total), 2) as 'Total Sales'
+FROM chinook.Employees emp
+JOIN chinook.Customers cust
+ON cust.SupportRepId = emp.EmployeeId
+JOIN chinook.Invoices Inv
+ON Inv.CustomerId = cust.CustomerId
+WHERE emp.Title = 'Sales Support Agent'
+AND Inv.InvoiceDate LIKE '2009%'
+GROUP BY emp.FirstName
+ORDER BY (round(sum(Inv.Total), 2))  DESC LIMIT 1;
+
+#14
+SELECT media_types.Name,invoices.Total
+FROM media_types
+JOIN Tracks
+ON media_types.MediaTypeId = Tracks.MediaTypeId
+JOIN invoice_items
+ON Tracks.TrackId = invoice_items.TrackId
+JOIN invoices
+ON invoice_items.InvoiceId =invoices.InvoiceId
+GROUP BY media_types.Name
+ORDER BY Total desc;
