@@ -1,6 +1,6 @@
 --Create a fashion boutique store database
 
-CREATE TABLE store (id INTEGER PRIMARY KEY, clothing TEXT, color TEXT,sizes TEXT, quantity INTEGER,price REAL);
+CREATE TABLE store (id INTEGER PRIMARY KEY, clothing TEXT, color TEXT, sizes TEXT, quantity INTEGER, price REAL);
 
 INSERT INTO store VALUES (1,"Dresses","Black","XS-XL", 10, 15.50);
 INSERT INTO store VALUES (2,"Tops","Red","XS-XL", 20, 10.50);
@@ -14,8 +14,8 @@ INSERT INTO store VALUES (9,"Socks","Black","XS-XL",15, 15.00);
 INSERT INTO store VALUES (10,"Hats","Black","XS-XL",12, 18.00);
 INSERT INTO store VALUES (11,"Shoes","Black","XS-XL",12, 20.00);
 INSERT INTO store VALUES (12,"Leggings","Black","XS-XL",15, 20.00);
-INSERT INTO store VALUES(13,"Scarfs","Red","XS-XL",15, 12.50);
-INSERT INTO store VALUES(14,"Nail_Polish","Red","one size",15, 7.00);
+INSERT INTO store VALUES (13,"Scarfs","Red","XS-XL",15, 12.50);
+INSERT INTO store VALUES (14,"Nail_Polish","Red","one size",15, 7.00);
 INSERT INTO store VALUES (15,"Sweaters","Blue","XS-XL", 20, 17.50);
 
 
