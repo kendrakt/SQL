@@ -1,93 +1,31 @@
-CREATE TABLE Dresses (id INTEGER PRIMARY KEY, color TEXT, size_range TEXT, quantity INTEGER, price REAL);
-INSERT INTO Dresses VALUES (1,"Blue","XS-XL", 10, 15.50);
-INSERT INTO Dresses VALUES (2,"Black","XS-XL",12, 20.00);
-INSERT INTO Dresses VALUES(3,"Red","XS-XL",15, 18.50);
-SELECT * FROM Dresses WHERE price ORDER BY price;
-SELECT * FROM Dresses WHERE "quanity" > 12;
-CREATE TABLE Tops (id INTEGER PRIMARY KEY, color TEXT, size_range TEXT, quantity INTEGER, price REAL);
-INSERT INTO Tops VALUES (1,"Blue","XS-XL", 10, 15.50);
-INSERT INTO Tops VALUES (2,"Black","XS-XL",12, 20.00);
-INSERT INTO Tops VALUES(3,"Red","XS-XL",15, 17.00);
-SELECT * FROM Tops WHERE price ORDER BY price;
-SELECT * FROM Tops WHERE "quanity" > 12;
-CREATE TABLE Pants (id INTEGER PRIMARY KEY, color TEXT, size_range TEXT, quantity INTEGER, price REAL);
-INSERT INTO Pants VALUES (1,"Blue","XS-XL", 10, 15.50);
-INSERT INTO Pants VALUES (2,"Black","XS-XL",12, 25.00);
-INSERT INTO Pants VALUES(3,"Brown","XS-XL",15, 18.50);
-SELECT * FROM Pants WHERE price ORDER BY price;
-SELECT * FROM Pants WHERE "quanity" > 12;
-CREATE TABLE Skirts (id INTEGER PRIMARY KEY, color TEXT, size_range TEXT, quantity INTEGER, price REAL);
-INSERT INTO Skirts VALUES (1,"Purple","XS-XL", 10, 15.50);
-INSERT INTO Skirts VALUES (2,"Black","XS-XL",12, 20.00);
-INSERT INTO Skirts VALUES (3,"Red","XS-XL", 10, 15.50);
-SELECT * FROM Skirts WHERE price ORDER BY price;
-SELECT * FROM Skirts WHERE "quanity" > 12;
-CREATE TABLE Jeans (id INTEGER PRIMARY KEY, color TEXT, size_range TEXT, quantity INTEGER, price REAL);
-INSERT INTO Jeans VALUES (1,"Blue","XS-XL", 10, 30.00);
-INSERT INTO Jeans VALUES (2,"Black","XS-XL",12, 25.00);
-INSERT INTO Jeans VALUES(3,"White","XS-XL",15, 27.50);
-SELECT * FROM Jeans WHERE price ORDER BY price;
-SELECT * FROM Jeans WHERE "quanity" > 12;
-CREATE TABLE Underwear (id INTEGER PRIMARY KEY, color TEXT, size_range TEXT, quantity INTEGER, price REAL);
-INSERT INTO Underwear VALUES (1,"Blue","XS-XL", 10, 15.50);
-INSERT INTO Underwear VALUES (2,"Black","XS-XL",12, 20.00);
-INSERT INTO Underwear VALUES(3,"Red","XS-XL",15, 18.50);
-SELECT * FROM Underwear WHERE price ORDER BY price;
-SELECT * FROM Underwear WHERE "quanity" > 12;
-CREATE TABLE Jewelry (id INTEGER PRIMARY KEY, color TEXT, size_range TEXT, quantity INTEGER, price REAL);
-INSERT INTO Jewelry VALUES (1,"Gold","XS-XL", 10, 15.50);
-INSERT INTO Jewelry VALUES (2,"Silver","XS-XL",12, 14.50);
-INSERT INTO Jewelry VALUES(3,"Rose_gold","XS-XL",15, 12.50);
-SELECT * FROM Jewelry WHERE price ORDER BY price;
-SELECT * FROM Jewelry WHERE "quanity" > 12;
-CREATE TABLE Hair_Accessories (id INTEGER PRIMARY KEY, color TEXT, size_range TEXT, quantity INTEGER, price REAL);
-INSERT INTO Hair_Accessories VALUES (1,"Blue","XS-XL", 10, 15.50);
-INSERT INTO Hair_Accessories VALUES (2,"Black","XS-XL",12, 20.00);
-INSERT INTO Hair_Accessories VALUES(3,"Red","XS-XL",15, 18.50);
-SELECT * FROM Hair_Accessories WHERE price ORDER BY price;
-SELECT * FROM Hair_Accessories WHERE "quanity" > 12;
-CREATE TABLE Socks (id INTEGER PRIMARY KEY, color TEXT, size_range TEXT, quantity INTEGER, price REAL);
-INSERT INTO Socks VALUES (1,"Blue","XS-XL", 10, 15.50);
-INSERT INTO Socks VALUES (2,"Black","XS-XL",12, 20.00);
-INSERT INTO Socks VALUES(3,"Red","XS-XL",15, 18.50);
-SELECT * FROM Socks WHERE price ORDER BY price;
-SELECT * FROM Socks WHERE "quanity" > 12;
-CREATE TABLE Hats (id INTEGER PRIMARY KEY, color TEXT, size_range TEXT, quantity INTEGER, price REAL);
-INSERT INTO Hats VALUES (1,"Blue","XS-XL", 10, 15.50);
-INSERT INTO Hats VALUES (2,"Black","XS-XL",12, 20.00);
-INSERT INTO Hats VALUES(3,"Red","XS-XL",15, 18.50);
-SELECT * FROM Hats WHERE price ORDER BY price;
-SELECT * FROM Hats WHERE "quanity" > 12;
-CREATE TABLE Shoes (id INTEGER PRIMARY KEY, color TEXT, size_range TEXT, quantity INTEGER, price REAL);
-INSERT INTO Shoes VALUES (1,"Blue","XS-XL", 10, 15.50);
-INSERT INTO Shoes VALUES (2,"Black","XS-XL",12, 20.00);
-INSERT INTO Shoes VALUES(3,"Red","XS-XL",15, 18.50);
-SELECT * FROM Shoes WHERE price ORDER BY price;
-SELECT * FROM Shoes WHERE "quanity" > 12;
-CREATE TABLE Leggings (id INTEGER PRIMARY KEY, color TEXT, size_range TEXT, quantity INTEGER, price REAL);
-INSERT INTO Leggings VALUES (1,"Blue","XS-XL", 10, 15.50);
-INSERT INTO Leggings VALUES (2,"Black","XS-XL",12, 20.00);
-INSERT INTO Leggings VALUES(3,"Brown","XS-XL",15, 18.50);
-SELECT * FROM Leggings WHERE price ORDER BY price;
-SELECT * FROM Leggings WHERE "quanity" > 12;
-CREATE TABLE Scarfs (id INTEGER PRIMARY KEY, color TEXT, size_range TEXT, quantity INTEGER, price REAL);
-INSERT INTO Scarfs VALUES (1,"Blue","XS-XL", 10, 15.50);
-INSERT INTO Scarfs VALUES (2,"Black","XS-XL",12, 20.00);
-INSERT INTO Scarfs VALUES(3,"Red","XS-XL",15, 18.50);
-SELECT * FROM Scarfs WHERE price ORDER BY price;
-SELECT * FROM Scarfs WHERE "quanity" > 12;
-CREATE TABLE Nail_Polish (id INTEGER PRIMARY KEY, color TEXT, size_range TEXT, quantity INTEGER, price REAL);
-INSERT INTO Nail_Polish VALUES (1,"Blue","XS-XL", 10, 15.50);
-INSERT INTO Nail_Polish VALUES (2,"Black","XS-XL",12, 20.00);
-INSERT INTO Nail_Polish VALUES(3,"Red","XS-XL",15, 18.50);
-SELECT * FROM Nail_Polish WHERE price ORDER BY price;
-SELECT * FROM Nail_Polish WHERE "quanity" > 12;
-CREATE TABLE Sweaters (id INTEGER PRIMARY KEY, color TEXT, size_range TEXT, quantity INTEGER, price REAL);
-INSERT INTO Sweaters VALUES (1,"Blue","XS-XL", 10, 17.50);
-INSERT INTO Sweaters VALUES (2,"Black","XS-XL",12, 27.00);
-INSERT INTO Sweaters VALUES(3,"Red","XS-XL",15, 15.50);
-SELECT * FROM Sweaters WHERE price ORDER BY price;
-SELECT * FROM Sweaters WHERE "quanity" > 12;
+--Create a fashion boutique store database
 
---display the database ordered by price. 
---Which of the store item colors has the most quantity?
+CREATE TABLE store (id INTEGER PRIMARY KEY, clothing TEXT, color TEXT,sizes TEXT, quantity INTEGER,price REAL);
+
+INSERT INTO store VALUES (1,"Dresses","Black","XS-XL", 10, 15.50);
+INSERT INTO store VALUES (2,"Tops","Red","XS-XL", 20, 10.50);
+INSERT INTO store VALUES (3,"Pants","Black","XS-XL",12, 25.00);
+INSERT INTO store VALUES (4,"Skirts","Black","XS-XL",12, 20.00);
+INSERT INTO store VALUES (5,"Jeans","Blue","XS-XL", 15, 30.00);
+INSERT INTO store VALUES (6,"Underwear","Black","XS-XL",12, 10.00);
+INSERT INTO store VALUES (7,"Jewelry","Gold","one size",15, 17.50);
+INSERT INTO store VALUES (8,"Hair_Accessories","Black","one size",20, 12.00);
+INSERT INTO store VALUES (9,"Socks","Black","XS-XL",15, 15.00);
+INSERT INTO store VALUES (10,"Hats","Black","XS-XL",12, 18.00);
+INSERT INTO store VALUES (11,"Shoes","Black","XS-XL",12, 20.00);
+INSERT INTO store VALUES (12,"Leggings","Black","XS-XL",15, 20.00);
+INSERT INTO store VALUES(13,"Scarfs","Red","XS-XL",15, 12.50);
+INSERT INTO store VALUES(14,"Nail_Polish","Red","one size",15, 7.00);
+INSERT INTO store VALUES (15,"Sweaters","Blue","XS-XL", 20, 17.50);
+
+
+--display the database ordered by price.
+SELECT * FROM store
+ORDER BY price desc;
+
+--what is the average price of items?
+SELECT AVG(price) "avg price" FROM store
+
+--Which of the store items has the most quantity?
+SELECT * FROM store
+ORDER BY quantity desc LIMIT 1;
