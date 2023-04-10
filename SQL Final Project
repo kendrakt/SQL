@@ -35,7 +35,7 @@ FROM chinook.customers
 WHERE Country != 'USA';
 
 #7
-	SELECT *
+SELECT *
 FROM invoices
 JOIN invoice_items i
 ON invoices.invoiceid = i.invoiceid
